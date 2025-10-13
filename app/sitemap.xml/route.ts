@@ -1,6 +1,8 @@
 import { apps } from '@/data/apps';
 import { posts } from '@/data/posts';
 
+export const dynamic = 'force-static';
+
 export async function GET() {
   const siteUrl = 'https://craftoryx.com';
 
