@@ -25,18 +25,18 @@ export default function AboutPage() {
     <div className="py-12 bg-gray-50 dark:bg-gray-950 min-h-screen">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-12 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 font-mono">
+        <div className="mb-8 sm:mb-12 text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 font-mono">
             About CraftoryX
           </h1>
-          <p className="text-xl text-gray-700 dark:text-gray-300">
+          <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300">
             One mission. Ten apps. Twelve months.
           </p>
         </div>
 
         {/* Mission */}
-        <section className="bg-white dark:bg-gray-900 rounded-lg p-8 mb-8 border border-gray-200 dark:border-gray-800">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 font-mono">
+        <section className="bg-white dark:bg-gray-900 rounded-lg p-6 sm:p-8 mb-6 sm:mb-8 border border-gray-200 dark:border-gray-800">
+          <h2 className="text-xl sm:text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 font-mono">
             The Mission
           </h2>
           <div className="space-y-4 text-gray-700 dark:text-gray-300">
@@ -58,8 +58,8 @@ export default function AboutPage() {
         </section>
 
         {/* Constraints */}
-        <section className="bg-white dark:bg-gray-900 rounded-lg p-8 mb-8 border border-gray-200 dark:border-gray-800">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 font-mono">
+        <section className="bg-white dark:bg-gray-900 rounded-lg p-6 sm:p-8 mb-6 sm:mb-8 border border-gray-200 dark:border-gray-800">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 font-mono">
             The Rules
           </h2>
           <div className="space-y-3">
@@ -112,8 +112,8 @@ export default function AboutPage() {
         </section>
 
         {/* Developer Bio */}
-        <section className="bg-white dark:bg-gray-900 rounded-lg p-8 mb-8 border border-gray-200 dark:border-gray-800">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 font-mono">
+        <section className="bg-white dark:bg-gray-900 rounded-lg p-6 sm:p-8 mb-6 sm:mb-8 border border-gray-200 dark:border-gray-800">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 font-mono">
             About the Developer
           </h2>
           <div className="space-y-4 text-gray-700 dark:text-gray-300">
@@ -135,8 +135,8 @@ export default function AboutPage() {
         </section>
 
         {/* Skills */}
-        <section className="bg-white dark:bg-gray-900 rounded-lg p-8 mb-8 border border-gray-200 dark:border-gray-800">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 font-mono">
+        <section className="bg-white dark:bg-gray-900 rounded-lg p-6 sm:p-8 mb-6 sm:mb-8 border border-gray-200 dark:border-gray-800">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 font-mono">
             Tech Stack & Skills
           </h2>
           <div className="flex flex-wrap gap-3">
@@ -152,8 +152,8 @@ export default function AboutPage() {
         </section>
 
         {/* Public Commitments */}
-        <section className="bg-white dark:bg-gray-900 rounded-lg p-8 mb-8 border border-gray-200 dark:border-gray-800">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 font-mono">
+        <section className="bg-white dark:bg-gray-900 rounded-lg p-6 sm:p-8 mb-6 sm:mb-8 border border-gray-200 dark:border-gray-800">
+          <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 font-mono">
             Public Commitments
           </h2>
           <div className="space-y-3">
@@ -217,7 +217,7 @@ export default function AboutPage() {
 
         {/* Contact CTA */}
         <section className="bg-blue-600 dark:bg-blue-700 rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-bold text-white mb-4 font-mono">
+          <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 font-mono">
             Let&apos;s Connect
           </h2>
           <p className="text-blue-100 mb-6">

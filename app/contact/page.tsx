@@ -38,18 +38,18 @@ export default function ContactPage() {
     <div className="py-12 bg-gray-50 dark:bg-gray-950 min-h-screen">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-12 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 font-mono">
+        <div className="mb-8 sm:mb-12 text-center">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 font-mono">
             Get in Touch
           </h1>
-          <p className="text-xl text-gray-700 dark:text-gray-300">
+          <p className="text-base sm:text-lg md:text-xl text-gray-700 dark:text-gray-300">
             Interested in beta testing, collaboration, or hiring? Let&apos;s talk.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {/* Contact Form */}
-          <div className="bg-white dark:bg-gray-900 rounded-lg p-8 border border-gray-200 dark:border-gray-800">
+          <div className="bg-white dark:bg-gray-900 rounded-lg p-6 sm:p-8 border border-gray-200 dark:border-gray-800">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 font-mono">
               Send a Message
             </h2>
@@ -160,7 +160,7 @@ export default function ContactPage() {
 
           {/* Newsletter Signup */}
           <div className="space-y-8">
-            <div className="bg-white dark:bg-gray-900 rounded-lg p-8 border border-gray-200 dark:border-gray-800">
+            <div className="bg-white dark:bg-gray-900 rounded-lg p-6 sm:p-8 border border-gray-200 dark:border-gray-800">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 font-mono">
                 Newsletter
               </h2>
@@ -187,7 +187,7 @@ export default function ContactPage() {
             </div>
 
             {/* Social Links */}
-            <div className="bg-white dark:bg-gray-900 rounded-lg p-8 border border-gray-200 dark:border-gray-800">
+            <div className="bg-white dark:bg-gray-900 rounded-lg p-6 sm:p-8 border border-gray-200 dark:border-gray-800">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 font-mono">
                 Connect
               </h2>
@@ -229,7 +229,7 @@ export default function ContactPage() {
             </div>
 
             {/* FAQ */}
-            <div className="bg-white dark:bg-gray-900 rounded-lg p-8 border border-gray-200 dark:border-gray-800">
+            <div className="bg-white dark:bg-gray-900 rounded-lg p-6 sm:p-8 border border-gray-200 dark:border-gray-800">
               <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 font-mono">
                 Quick Info
               </h2>
