@@ -7,7 +7,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8)](https://tailwindcss.com/)
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-**Live Site:** [craftoryx.com](https://craftoryx.com) (Coming soon)
+**Live Site:** [craftoryx.com](https://craftoryx.org)
 
 ---
 
