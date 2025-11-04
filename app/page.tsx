@@ -149,6 +149,241 @@ export default function Home() {
         </div>
       </section>
 
+      {/* About CraftoryX Section */}
+      <section className="py-12 sm:py-16 md:py-20 bg-gray-50 dark:bg-gray-900">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 font-mono">
+              About CraftoryX
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400">
+              One mission. Ten apps. Twelve months.
+            </p>
+          </div>
+
+          {/* Mission */}
+          <div className="bg-white dark:bg-gray-950 rounded-lg p-6 sm:p-8 mb-6 sm:mb-8 border border-gray-200 dark:border-gray-800">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 font-mono">
+              The Mission
+            </h3>
+            <div className="space-y-4 text-gray-700 dark:text-gray-300">
+              <p>
+                CraftoryX is my commitment to ship 10 production-ready iOS apps to the App Store in one year.
+                This isn&apos;t about building quick prototypes or side projects that never see the light of day.
+              </p>
+              <p className="font-semibold text-gray-900 dark:text-white">Every app will be:</p>
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>Built with Swift and native iOS frameworks</li>
+                <li>Polished, accessible, and user-tested</li>
+                <li>Published to the App Store</li>
+                <li>Documented with open roadmaps and changelogs</li>
+                <li>Developed transparently with weekly dev logs</li>
+              </ul>
+            </div>
+          </div>
+
+          {/* The Rules */}
+          <div className="bg-white dark:bg-gray-950 rounded-lg p-6 sm:p-8 mb-6 sm:mb-8 border border-gray-200 dark:border-gray-800">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-6 font-mono">
+              The Rules
+            </h3>
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <span className="text-3xl flex-shrink-0">🎯</span>
+                <div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Swift Only</h4>
+                  <p className="text-gray-700 dark:text-gray-300 text-sm">
+                    All apps built with Swift, SwiftUI, and native iOS frameworks. No cross-platform tools.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <span className="text-3xl flex-shrink-0">🚀</span>
+                <div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Real Releases</h4>
+                  <p className="text-gray-700 dark:text-gray-300 text-sm">
+                    Every app must be submitted to and approved by the App Store. No prototypes.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <span className="text-3xl flex-shrink-0">📝</span>
+                <div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Build in Public</h4>
+                  <p className="text-gray-700 dark:text-gray-300 text-sm">
+                    Weekly dev logs documenting progress, challenges, and lessons learned.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <span className="text-3xl flex-shrink-0">♿</span>
+                <div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Accessibility First</h4>
+                  <p className="text-gray-700 dark:text-gray-300 text-sm">
+                    VoiceOver support, Dynamic Type, keyboard navigation, and WCAG AA+ compliance.
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-start gap-4">
+                <span className="text-3xl flex-shrink-0">⏰</span>
+                <div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">One Year Deadline</h4>
+                  <p className="text-gray-700 dark:text-gray-300 text-sm">
+                    All 10 apps released between September 2025 and August 2026.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Tech Stack */}
+          <div className="bg-white dark:bg-gray-950 rounded-lg p-6 sm:p-8 mb-6 sm:mb-8 border border-gray-200 dark:border-gray-800">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 font-mono">
+              Tech Stack & Skills
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {['Swift', 'SwiftUI', 'UIKit', 'Combine', 'CoreData', 'CloudKit', 'CoreML', 'Vision', 'HealthKit', 'WidgetKit', 'App Store Optimization', 'Accessibility'].map((skill) => (
+                <span
+                  key={skill}
+                  className="px-3 py-1.5 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 rounded-lg text-sm font-medium border border-gray-200 dark:border-gray-800"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          {/* Public Commitments */}
+          <div className="bg-white dark:bg-gray-950 rounded-lg p-6 sm:p-8 mb-6 sm:mb-8 border border-gray-200 dark:border-gray-800">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 font-mono">
+              Public Commitments
+            </h3>
+            <div className="space-y-3">
+              {[
+                'Weekly dev log posts (every Monday)',
+                'Open roadmaps for all apps',
+                'TestFlight betas before public launch',
+                'WCAG AA+ accessibility compliance',
+                'Transparent about failures and pivots'
+              ].map((commitment, index) => (
+                <div key={index} className="flex items-center gap-3">
+                  <input
+                    type="checkbox"
+                    checked
+                    readOnly
+                    className="w-5 h-5 rounded border-gray-300 dark:border-gray-600 text-blue-600"
+                  />
+                  <span className="text-gray-700 dark:text-gray-300">{commitment}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Me Section */}
+      <section className="py-12 sm:py-16 md:py-20 bg-white dark:bg-gray-950">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4 font-mono">
+              About the Developer
+            </h2>
+          </div>
+
+          <div className="bg-white dark:bg-gray-900 rounded-lg p-6 sm:p-8 border border-gray-200 dark:border-gray-800">
+            {/* Profile Section */}
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-8">
+              <img
+  src="https://media.licdn.com/dms/image/v2/D5603AQFNn4szZ9DOvQ/profile-displayphoto-shrink_800_800/B56ZcgOyXIHEAc-/0/1748592438322?e=1763596800&v=beta&t=2EB4kuEz4OzTMwy8kvMtaz2kvvslg1EF1ljhPv2fIlk"
+  alt="Owais Khan"
+  className="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-4 border-gray-200 dark:border-gray-700"
+/>
+              <div className="flex-shrink-0">
+                <p className="text-center text-xs text-gray-500 dark:text-gray-400 mt-2">
+                  
+                </p>
+              </div>
+
+              {/* Profile Info */}
+              <div className="flex-1 text-center md:text-left">
+                <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                  Owais Khan
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-3">
+                  He/Him
+                </p>
+                <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 mb-4">
+                  iOS Developer | Machine Learning | Computer Science Graduate
+                </p>
+                <div className="flex flex-wrap gap-2 justify-center md:justify-start">
+                  <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full text-sm">
+                    Swift
+                  </span>
+                  <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full text-sm">
+                    Async/Await
+                  </span>
+                  <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full text-sm">
+                    ARKit
+                  </span>
+                  <span className="px-3 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 rounded-full text-sm">
+                    Machine Learning
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* About Text */}
+            <div className="space-y-4 text-gray-700 dark:text-gray-300 mb-6">
+              <p>
+                I&apos;m a solo developer currently working at <strong>Hidonix</strong> as a Mobile Application Developer.
+                This project is something I&apos;ve always wanted to do building and shipping 10 iOS apps in 12 months but
+                I never had the time during my studies.
+              </p>
+              <p>
+                After graduating and gaining experience in iOS development,
+                AR applications, machine learning, and autonomous systems, I&apos;m finally ready to take on this
+                challenge. This is my opportunity to combine everything I&apos;ve learned and ship real products to
+                the App Store.
+              </p>
+              <p>
+                Throughout my career, I&apos;ve worked on cross-platform mobile applications using Swift, Kotlin,
+                and React Native. I&apos;ve developed AR shopping assistants with ARKit, implemented YOLO for object
+                detection in autonomous vehicles, and built responsive user interfaces that millions could use.
+              </p>
+              <p>
+                Now it&apos;s time to build something for myself and share the entire journey with you.
+              </p>
+            </div>
+
+            {/* Experience Highlight */}
+            <div className="border-t border-gray-200 dark:border-gray-700 pt-6">
+              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                Current Role
+              </h4>
+              <div className="flex items-start gap-3">
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold flex-shrink-0">
+                  H
+                </div>
+                <div>
+                  <h5 className="font-semibold text-gray-900 dark:text-white">
+                    Mobile Application Developer
+                  </h5>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    Hidonix · Full-time
+                  </p>
+                  <p className="text-gray-500 dark:text-gray-500 text-sm">
+                    Aug 2025 - Present · Los Angeles, CA
+                  </p>
+                  <p className="text-gray-700 dark:text-gray-300 text-sm mt-2">
+                    Developing mobile applications for iOS and Android using Swift and Kotlin. Integrating RESTful APIs and optimizing app performance.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="py-12 sm:py-16 md:py-20 bg-blue-600 dark:bg-blue-700">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
