@@ -163,12 +163,9 @@ function CollaborationSection() {
       >
         {collaborators.map((collab, index) => {
           const pos = positions[index] || { x: 0, y: 0 };
-          const BubbleWrapper = collab.link ? Link : 'div';
 
-          return (
-            <BubbleWrapper
-              key={collab.id}
-              {...(collab.link ? { href: collab.link } : {})}
+          const bubbleContent = (
+            <div
               className={`absolute transition-all duration-200 ease-out ${collab.link ? 'hover:scale-110 cursor-pointer' : ''}`}
               style={{
                 transform: `translate(${pos.x}px, ${pos.y}px)`,
@@ -200,7 +197,15 @@ function CollaborationSection() {
                   {collab.initials}
                 </div>
               )}
-            </BubbleWrapper>
+            </div>
+          );
+
+          return collab.link ? (
+            <Link key={collab.id} href={collab.link}>
+              {bubbleContent}
+            </Link>
+          ) : (
+            <div key={collab.id}>{bubbleContent}</div>
           );
         })}
       </div>
