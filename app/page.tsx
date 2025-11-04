@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { getFeaturedApps } from '@/data/apps';
 import { apps } from '@/data/apps';
 import AppCard from '@/components/AppCard';
@@ -293,15 +294,14 @@ export default function Home() {
           <div className="bg-white dark:bg-gray-900 rounded-lg p-6 sm:p-8 border border-gray-200 dark:border-gray-800">
             {/* Profile Section */}
             <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-8">
-              <img
-  src="https://media.licdn.com/dms/image/v2/D5603AQFNn4szZ9DOvQ/profile-displayphoto-shrink_800_800/B56ZcgOyXIHEAc-/0/1748592438322?e=1763596800&v=beta&t=2EB4kuEz4OzTMwy8kvMtaz2kvvslg1EF1ljhPv2fIlk"
-  alt="Owais Khan"
-  className="w-32 h-32 sm:w-40 sm:h-40 rounded-full object-cover border-4 border-gray-200 dark:border-gray-700"
-/>
-              <div className="flex-shrink-0">
-                <p className="text-center text-xs text-gray-500 dark:text-gray-400 mt-2">
-                  
-                </p>
+              <div className="relative w-32 h-32 sm:w-40 sm:h-40 flex-shrink-0">
+                <Image
+                  src="https://media.licdn.com/dms/image/v2/D5603AQFNn4szZ9DOvQ/profile-displayphoto-shrink_800_800/B56ZcgOyXIHEAc-/0/1748592438322?e=1763596800&v=beta&t=2EB4kuEz4OzTMwy8kvMtaz2kvvslg1EF1ljhPv2fIlk"
+                  alt="Owais Khan"
+                  width={160}
+                  height={160}
+                  className="rounded-full object-cover border-4 border-gray-200 dark:border-gray-700"
+                />
               </div>
 
               {/* Profile Info */}

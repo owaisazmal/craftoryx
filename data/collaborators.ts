@@ -14,7 +14,7 @@ export const collaborators: Collaborator[] = [
     initials: 'OK',
     color: 'from-blue-500 to-purple-600',
     imageUrl: 'https://media.licdn.com/dms/image/v2/D5603AQFNn4szZ9DOvQ/profile-displayphoto-shrink_800_800/B56ZcgOyXIHEAc-/0/1748592438322?e=1763596800&v=beta&t=2EB4kuEz4OzTMwy8kvMtaz2kvvslg1EF1ljhPv2fIlk',
-    link: '/#about-the-developer',
+    link: 'https://www.linkedin.com/in/owais-khan-266492222/',
   },
   {
     id: 2,
