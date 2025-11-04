@@ -1,5 +1,7 @@
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import ReactMarkdown from 'react-markdown';
+import remarkGfm from 'remark-gfm';
 import { getPostBySlug, posts } from '@/data/posts';
 import type { Metadata } from 'next';
 
@@ -85,10 +87,9 @@ export default async function PostPage({ params }: PostPageProps) {
 
         {/* Content */}
         <div className="prose prose-lg dark:prose-invert max-w-none bg-white dark:bg-gray-900 rounded-lg p-8 md:p-12 border border-gray-200 dark:border-gray-800">
-          <div
-            className="whitespace-pre-wrap text-gray-700 dark:text-gray-300"
-            dangerouslySetInnerHTML={{ __html: post.content.replace(/\n/g, '<br/>') }}
-          />
+          <ReactMarkdown remarkPlugins={[remarkGfm]}>
+            {post.content}
+          </ReactMarkdown>
         </div>
 
         {/* Footer */}

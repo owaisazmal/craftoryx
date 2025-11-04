@@ -2,6 +2,7 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import { getAppBySlug, apps } from '@/data/apps';
 import StatusChip from '@/components/StatusChip';
+import AppSimulator from '@/components/AppSimulator';
 import type { Metadata } from 'next';
 
 interface AppDetailPageProps {
@@ -77,13 +78,18 @@ export default async function AppDetailPage({ params }: AppDetailPageProps) {
           </div>
         </div>
 
-        {/* Hero Mockup Placeholder */}
-        <div className="bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl h-96 flex items-center justify-center mb-12 text-white text-center p-8">
-          <div>
-            <div className="text-6xl mb-4">📱</div>
-            <p className="text-lg font-medium">App Screenshot Placeholder</p>
-            <p className="text-sm opacity-80">iPhone frame mockup will go here</p>
-          </div>
+        {/* Interactive App Simulator */}
+        <div className="mb-12 flex justify-center bg-gradient-to-br from-blue-500/10 to-purple-600/10 dark:from-blue-500/5 dark:to-purple-600/5 rounded-2xl py-12">
+          <AppSimulator
+            appName={app.name}
+            features={app.features.slice(0, 5)}
+            accentColor={
+              app.slug === 'focusflow' ? '#007AFF' :
+              app.slug === 'budgetwise' ? '#34C759' :
+              app.slug === 'habitstack' ? '#FF9500' :
+              '#007AFF'
+            }
+          />
         </div>
 
         {/* Problem & Solution */}
