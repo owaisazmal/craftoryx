@@ -304,15 +304,26 @@ export default function ProjectsPage() {
           <p className="text-lg sm:text-xl mb-4 text-blue-50">
             Let me build it for you, at no cost.
           </p>
-          <p className="text-base sm:text-lg mb-6 text-blue-100">
+          <p className="text-base sm:text-lg mb-4 text-blue-100">
             Email me your idea, and you&apos;ll be credited in the collaboration section.
           </p>
-          <a
-            href="/contact"
-            className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-md"
-          >
-            Submit Your Idea
-          </a>
+          <p className="text-sm sm:text-base mb-6 text-blue-100 italic">
+            Found a bug or have feedback? Let me know!
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <a
+              href="/contact"
+              className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors shadow-md text-center"
+            >
+              Submit Your Idea
+            </a>
+            <a
+              href="/contact?subject=bug"
+              className="inline-block bg-white/10 backdrop-blur-sm border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white/20 transition-colors text-center"
+            >
+              Report a Bug
+            </a>
+          </div>
         </div>
 
         {/* Collaboration Section */}
