@@ -305,7 +305,7 @@ export default function ProjectsPage() {
             Let me build it for you, at no cost.
           </p>
           <p className="text-base sm:text-lg mb-6 text-blue-100">
-            Email me your idea, and you'll be credited in the collaboration section.
+            Email me your idea, and you&apos;ll be credited in the collaboration section.
           </p>
           <a
             href="/contact"
