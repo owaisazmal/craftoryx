@@ -1,0 +1,127 @@
+.gooey-nav-container {
+  position: relative;
+  display: inline-block;
+  --color-1: rgba(59, 130, 246, 0.6);
+  --color-2: rgba(139, 92, 246, 0.6);
+  --color-3: rgba(236, 72, 153, 0.6);
+  --color-4: rgba(251, 146, 60, 0.6);
+}
+
+.gooey-nav-container nav {
+  position: relative;
+  z-index: 1;
+}
+
+.gooey-nav-container ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 8px;
+  position: relative;
+  z-index: 2;
+}
+
+.gooey-nav-container li {
+  position: relative;
+}
+
+.gooey-nav-container li a {
+  display: block;
+  padding: 8px 16px;
+  text-decoration: none;
+  color: rgb(55, 65, 81);
+  font-size: 14px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: color 0.2s;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.dark .gooey-nav-container li a {
+  color: rgb(209, 213, 219);
+}
+
+.gooey-nav-container li.active a {
+  color: rgb(37, 99, 235);
+}
+
+.dark .gooey-nav-container li.active a {
+  color: rgb(96, 165, 250);
+}
+
+.effect {
+  position: absolute;
+  pointer-events: none;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.effect.filter {
+  background: rgba(59, 130, 246, 0.1);
+  backdrop-filter: blur(10px);
+  z-index: 0;
+}
+
+.dark .effect.filter {
+  background: rgba(96, 165, 250, 0.15);
+}
+
+.effect.filter.active {
+  background: rgba(59, 130, 246, 0.2);
+}
+
+.dark .effect.filter.active {
+  background: rgba(96, 165, 250, 0.2);
+}
+
+.effect.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(37, 99, 235);
+  font-size: 14px;
+  font-weight: 500;
+  z-index: 1;
+  opacity: 0;
+  transform: scale(0.8);
+}
+
+.dark .effect.text {
+  color: rgb(96, 165, 250);
+}
+
+.effect.text.active {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.3s, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.effect.filter.active .particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translate(var(--start-x, 0), var(--start-y, 0)) scale(var(--scale, 1)) rotate(var(--rotate, 0deg));
+  background: var(--color, rgba(59, 130, 246, 0.6));
+  animation: particle-animation var(--time, 1000ms) ease-out forwards;
+}
+
+@keyframes particle-animation {
+  to {
+    transform: translate(-50%, -50%) translate(var(--end-x, 0), var(--end-y, 0)) scale(0) rotate(calc(var(--rotate, 0deg) + 360deg));
+    opacity: 0;
+  }
+}
+
+.effect.filter.active .point {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: inherit;
+}
+

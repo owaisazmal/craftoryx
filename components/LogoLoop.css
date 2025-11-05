@@ -1,0 +1,71 @@
+.logoloop {
+  position: relative;
+  overflow: hidden;
+  height: var(--logoloop-itemHeight, 28px);
+}
+
+.logoloop__track {
+  display: flex;
+  will-change: transform;
+  white-space: nowrap;
+}
+
+.logoloop__list {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: var(--logoloop-gap, 32px);
+  margin-right: var(--logoloop-gap, 32px);
+}
+
+.logoloop__item {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.logoloop__text {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.logoloop__link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s;
+}
+
+.logoloop__link:hover {
+  opacity: 0.8;
+}
+
+.logoloop--fade {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    var(--logoloop-fadeColor, currentColor) 20px,
+    var(--logoloop-fadeColor, currentColor) calc(100% - 20px),
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    var(--logoloop-fadeColor, currentColor) 20px,
+    var(--logoloop-fadeColor, currentColor) calc(100% - 20px),
+    transparent
+  );
+}
+
+.logoloop--scale-hover .logoloop__item {
+  transition: transform 0.2s;
+}
+
+.logoloop--scale-hover:hover .logoloop__item {
+  transform: scale(1.05);
+}
+

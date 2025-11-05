@@ -5,6 +5,8 @@ import { apps } from '@/data/apps';
 import AppCard from '@/components/AppCard';
 import ProgressBar from '@/components/ProgressBar';
 import Timeline from '@/components/Timeline';
+import LogoLoop from '@/components/LogoLoop';
+import { skillIcons } from '@/lib/skillIcons';
 
 export default function Home() {
   const featuredApps = getFeaturedApps();
@@ -239,19 +241,29 @@ export default function Home() {
 
           {/* Tech Stack */}
           <div className="bg-white dark:bg-gray-950 rounded-lg p-6 sm:p-8 mb-6 sm:mb-8 border border-gray-200 dark:border-gray-800">
-            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 font-mono">
+            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-6 font-mono">
               Tech Stack & Skills
             </h3>
-            <div className="flex flex-wrap gap-2">
-              {['Swift', 'SwiftUI', 'UIKit', 'Combine', 'CoreData', 'CloudKit', 'CoreML', 'Vision', 'HealthKit', 'WidgetKit', 'App Store Optimization', 'Accessibility'].map((skill) => (
-                <span
-                  key={skill}
-                  className="px-3 py-1.5 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 rounded-lg text-sm font-medium border border-gray-200 dark:border-gray-800"
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
+            <LogoLoop
+              items={['Swift', 'SwiftUI', 'UIKit', 'Combine', 'CoreData', 'CloudKit', 'CoreML', 'Vision', 'HealthKit', 'WidgetKit', 'App Store Optimization', 'Accessibility'].map((skill) => ({
+                text: skill,
+                node: (
+                  <span className="px-4 py-2 bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200 rounded-lg text-sm font-medium border border-gray-200 dark:border-gray-800 whitespace-nowrap flex items-center gap-2">
+                    <span className="text-gray-600 dark:text-gray-400 flex-shrink-0">
+                      {skillIcons[skill] || '⚙️'}
+                    </span>
+                    {skill}
+                  </span>
+                )
+              }))}
+              speed={60}
+              direction="left"
+              gap={24}
+              itemHeight={40}
+              pauseOnHover={true}
+              fadeOut={true}
+              className="mt-4"
+            />
           </div>
 
           {/* Public Commitments */}
