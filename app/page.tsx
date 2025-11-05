@@ -340,18 +340,16 @@ export default function Home() {
                 I never had the time during my studies.
               </p>
               <p>
-                After graduating and gaining experience in iOS development,
-                AR applications, machine learning, and autonomous systems, I&apos;m finally ready to take on this
-                challenge. This is my opportunity to combine everything I&apos;ve learned and ship real products to
-                the App Store.
+                I am a solo developer, so if you find any mistakes or bugs, please{' '}
+                <Link href="/contact" className="text-blue-600 dark:text-blue-400 hover:underline font-medium">
+                  report them
+                </Link>
+                . Your feedback helps me improve these apps and make them better for everyone.
               </p>
               <p>
                 Throughout my career, I&apos;ve worked on cross-platform mobile applications using Swift, Kotlin,
                 and React Native. I&apos;ve developed AR shopping assistants with ARKit, implemented YOLO for object
                 detection in autonomous vehicles, and built responsive user interfaces that millions could use.
-              </p>
-              <p>
-                Now it&apos;s time to build something for myself and share the entire journey with you.
               </p>
             </div>
 

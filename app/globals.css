@@ -57,3 +57,89 @@ body {
 .skip-link:focus {
   top: 0;
 }
+
+/* GitHub-style markdown typography */
+.markdown-content h1 {
+  font-size: 1.5rem !important;
+  font-weight: 600 !important;
+  margin-top: 2rem !important;
+  margin-bottom: 1rem !important;
+  padding-bottom: 0.75rem !important;
+  border-bottom: 1px solid rgb(229 231 235) !important;
+}
+
+.dark .markdown-content h1 {
+  border-bottom-color: rgb(33 38 45) !important;
+  color: rgb(249 250 251) !important;
+}
+
+.markdown-content h2 {
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  margin-top: 1.5rem !important;
+  margin-bottom: 0.75rem !important;
+  padding-bottom: 0.5rem !important;
+  border-bottom: 1px solid rgb(229 231 235) !important;
+}
+
+.dark .markdown-content h2 {
+  border-bottom-color: rgb(33 38 45) !important;
+  color: rgb(249 250 251) !important;
+}
+
+.markdown-content h3 {
+  font-size: 1.125rem !important;
+  font-weight: 600 !important;
+  margin-top: 1rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.dark .markdown-content h3 {
+  color: rgb(249 250 251) !important;
+}
+
+.markdown-content h4 {
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  margin-top: 1rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+.dark .markdown-content h4 {
+  color: rgb(249 250 251) !important;
+}
+
+.markdown-content p {
+  font-size: 16px !important;
+  line-height: 1.75 !important;
+  margin-bottom: 1rem !important;
+  color: rgb(55 65 81) !important;
+}
+
+.dark .markdown-content p {
+  color: rgb(201 209 217) !important;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+  font-size: 16px !important;
+  margin-bottom: 1rem !important;
+  padding-left: 1.5rem !important;
+  color: rgb(55 65 81) !important;
+}
+
+.dark .markdown-content ul,
+.dark .markdown-content ol {
+  color: rgb(201 209 217) !important;
+}
+
+.markdown-content li {
+  font-size: 16px !important;
+  line-height: 1.75 !important;
+  margin: 0.25rem 0 !important;
+  color: rgb(55 65 81) !important;
+}
+
+.dark .markdown-content li {
+  color: rgb(201 209 217) !important;
+}
