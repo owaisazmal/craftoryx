@@ -7,10 +7,147 @@ import ProgressBar from '@/components/ProgressBar';
 import Timeline from '@/components/Timeline';
 import LogoLoop from '@/components/LogoLoop';
 import { skillIcons } from '@/lib/skillIcons';
+import MagnetLines from '@/components/MagnetLines';
+import Carousel from '@/components/Carousel';
+import { getGitHubStars } from '@/lib/github';
 
-export default function Home() {
+export default async function Home() {
   const featuredApps = getFeaturedApps();
   const shippedCount = apps.filter(app => app.status === 'Released').length;
+  const githubStars = await getGitHubStars('owaisazmal');
+
+  const carouselItems = [
+    {
+      title: 'Swift Only',
+      description: 'Native iOS development using Apple\'s official frameworks and tools',
+      id: 1,
+      icon: <span className="text-2xl font-bold">S</span>,
+      items: [
+        'Built exclusively with Swift programming language',
+        'SwiftUI for modern declarative interfaces',
+        'UIKit for complex custom UI components',
+        'Native iOS frameworks only - no cross-platform tools',
+        'Optimized for iOS performance and platform conventions'
+      ]
+    },
+    {
+      title: 'Real Releases',
+      description: 'Production-ready applications published on the App Store',
+      id: 2,
+      icon: <span className="text-2xl font-bold">R</span>,
+      items: [
+        'Every app submitted to Apple\'s App Store review',
+        'Full compliance with App Store guidelines',
+        'Production-ready code with proper error handling',
+        'No prototypes or demo apps - only polished products',
+        'Available for download by real users worldwide'
+      ]
+    },
+    {
+      title: 'Build in Public',
+      description: 'Transparent development process shared with the community',
+      id: 3,
+      icon: <span className="text-2xl font-bold">B</span>,
+      items: [
+        'Weekly dev log posts published every Monday',
+        'Detailed progress updates and technical insights',
+        'Sharing challenges, blockers, and solutions',
+        'Open discussion of architectural decisions',
+        'Learning journey documented for the community'
+      ]
+    },
+    {
+      title: 'Accessibility First',
+      description: 'Inclusive design ensuring apps are usable by everyone',
+      id: 4,
+      icon: <span className="text-2xl font-bold">A</span>,
+      items: [
+        'Full VoiceOver support for screen reader users',
+        'Dynamic Type support for custom text sizes',
+        'Keyboard navigation and input accessibility',
+        'WCAG AA+ compliance standards met',
+        'Color contrast ratios optimized for visibility'
+      ]
+    },
+    {
+      title: 'One Year Timeline',
+      description: 'Structured schedule to ship all 10 apps within 12 months',
+      id: 5,
+      icon: <span className="text-2xl font-bold">T</span>,
+      items: [
+        'Start date: September 2025',
+        'End date: August 2026',
+        'Average of one app per 6 weeks',
+        'Milestone tracking with public roadmaps',
+        'Flexible scheduling to accommodate complexity'
+      ]
+    },
+    {
+      title: 'Weekly Dev Logs',
+      description: 'Regular updates documenting the development journey',
+      id: 6,
+      icon: <span className="text-2xl font-bold">W</span>,
+      items: [
+        'Published every Monday without exception',
+        'Covers progress made during the previous week',
+        'Technical deep dives and code snippets',
+        'Metrics and performance data shared openly',
+        'Lessons learned and mistakes acknowledged'
+      ]
+    },
+    {
+      title: 'Open Roadmaps',
+      description: 'Public project planning and feature prioritization',
+      id: 7,
+      icon: <span className="text-2xl font-bold">O</span>,
+      items: [
+        'Detailed roadmaps for each app project',
+        'Feature backlogs visible to everyone',
+        'Priority decisions explained and justified',
+        'Community can suggest features and improvements',
+        'Version history and release notes maintained'
+      ]
+    },
+    {
+      title: 'TestFlight Beta',
+      description: 'Early access program for testing before public release',
+      id: 8,
+      icon: <span className="text-2xl font-bold">TF</span>,
+      items: [
+        'Beta testing through Apple\'s TestFlight platform',
+        'Early access for community members',
+        'Bug reports and feedback actively collected',
+        'Multiple beta iterations before App Store launch',
+        'Beta testers acknowledged in release notes'
+      ]
+    },
+    {
+      title: 'Quality Standards',
+      description: 'High standards for code quality and user experience',
+      id: 9,
+      icon: <span className="text-2xl font-bold">Q</span>,
+      items: [
+        'Comprehensive testing for all features',
+        'Clean, maintainable code architecture',
+        'Performance optimization and profiling',
+        'User-tested interfaces and workflows',
+        'Regular code reviews and refactoring'
+      ]
+    },
+    {
+      title: 'Transparent Progress',
+      description: 'Honest reporting of successes, failures, and pivots',
+      id: 10,
+      icon: <span className="text-2xl font-bold">TP</span>,
+      items: [
+        'No hiding mistakes or setbacks from the community',
+        'Pivot decisions explained with reasoning',
+        'Failed experiments documented as learning opportunities',
+        'Honest assessment of time and effort required',
+        'Real talk about the challenges of solo development'
+      ]
+    }
+  ];
 
   return (
     <>
@@ -36,8 +173,8 @@ export default function Home() {
             >
               View All Projects
             </Link>
+            </div>
           </div>
-        </div>
       </section>
 
       {/* Progress Section */}
@@ -104,7 +241,7 @@ export default function Home() {
                   <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clipRule="evenodd" />
                 </svg>
                 <span className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white font-mono">
-                  ?
+                  {githubStars}
                 </span>
               </div>
               <div className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
@@ -115,7 +252,7 @@ export default function Home() {
           <div className="mt-12 text-center">
             <div className="flex gap-4 justify-center items-center">
               <a
-                href="https://github.com"
+                href="https://github.com/owaisazmal"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
@@ -126,7 +263,7 @@ export default function Home() {
                 </svg>
               </a>
               <a
-                href="https://twitter.com"
+                href="https://twitter.com/owaisazmal"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
@@ -137,7 +274,7 @@ export default function Home() {
                 </svg>
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/owaisazmal"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
@@ -153,8 +290,20 @@ export default function Home() {
       </section>
 
       {/* About CraftoryX Section */}
-      <section className="py-12 sm:py-16 md:py-20 bg-gray-50 dark:bg-gray-900">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 md:py-20 bg-gray-50 dark:bg-gray-900 relative">
+        <div className="absolute inset-0 z-0">
+          <MagnetLines
+            rows={20}
+            columns={14}
+            containerSize="100%"
+            lineColor="#cfd8dc"
+            lineWidth="2px"
+            lineHeight="28px"
+            baseAngle={-8}
+            className="opacity-60"
+          />
+        </div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center mb-8 sm:mb-12">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 font-mono">
               About CraftoryX
@@ -185,62 +334,20 @@ export default function Home() {
             </div>
           </div>
 
-          {/* The Rules */}
-          <div className="bg-white dark:bg-gray-950 rounded-lg p-6 sm:p-8 mb-6 sm:mb-8 border border-gray-200 dark:border-gray-800">
-            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-6 font-mono">
-              The Rules
-            </h3>
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <span className="text-3xl flex-shrink-0">🎯</span>
-                <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Swift Only</h4>
-                  <p className="text-gray-700 dark:text-gray-300 text-sm">
-                    All apps built with Swift, SwiftUI, and native iOS frameworks. No cross-platform tools.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="text-3xl flex-shrink-0">🚀</span>
-                <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Real Releases</h4>
-                  <p className="text-gray-700 dark:text-gray-300 text-sm">
-                    Every app must be submitted to and approved by the App Store. No prototypes.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="text-3xl flex-shrink-0">📝</span>
-                <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Build in Public</h4>
-                  <p className="text-gray-700 dark:text-gray-300 text-sm">
-                    Weekly dev logs documenting progress, challenges, and lessons learned.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="text-3xl flex-shrink-0">♿</span>
-                <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Accessibility First</h4>
-                  <p className="text-gray-700 dark:text-gray-300 text-sm">
-                    VoiceOver support, Dynamic Type, keyboard navigation, and WCAG AA+ compliance.
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <span className="text-3xl flex-shrink-0">⏰</span>
-                <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-1">One Year Deadline</h4>
-                  <p className="text-gray-700 dark:text-gray-300 text-sm">
-                    All 10 apps released between September 2025 and August 2026.
-                  </p>
-                </div>
-              </div>
-            </div>
+          {/* Rules & Commitments Carousel */}
+          <div className="flex justify-center mb-6 sm:mb-8">
+            <Carousel
+              items={carouselItems}
+              baseWidth={500}
+              autoplay={true}
+              autoplayDelay={5000}
+              pauseOnHover={true}
+              loop={true}
+            />
           </div>
 
           {/* Tech Stack */}
-          <div className="bg-white dark:bg-gray-950 rounded-lg p-6 sm:p-8 mb-6 sm:mb-8 border border-gray-200 dark:border-gray-800">
+          <div className="bg-white dark:bg-gray-950 rounded-lg p-6 sm:p-8 border border-gray-200 dark:border-gray-800">
             <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-6 font-mono">
               Tech Stack & Skills
             </h3>
@@ -264,32 +371,6 @@ export default function Home() {
               fadeOut={true}
               className="mt-4"
             />
-          </div>
-
-          {/* Public Commitments */}
-          <div className="bg-white dark:bg-gray-950 rounded-lg p-6 sm:p-8 mb-6 sm:mb-8 border border-gray-200 dark:border-gray-800">
-            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 font-mono">
-              Public Commitments
-            </h3>
-            <div className="space-y-3">
-              {[
-                'Weekly dev log posts (every Monday)',
-                'Open roadmaps for all apps',
-                'TestFlight betas before public launch',
-                'WCAG AA+ accessibility compliance',
-                'Transparent about failures and pivots'
-              ].map((commitment, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <input
-                    type="checkbox"
-                    checked
-                    readOnly
-                    className="w-5 h-5 rounded border-gray-300 dark:border-gray-600 text-blue-600"
-                  />
-                  <span className="text-gray-700 dark:text-gray-300">{commitment}</span>
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>

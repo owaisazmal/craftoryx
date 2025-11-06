@@ -1,0 +1,21 @@
+.container {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.item {
+  display: block;
+  border-radius: 9999px;
+  transform-origin: center center;
+  transform: rotate(var(--rotate, 0deg));
+  transition: transform 120ms ease-out;
+  justify-self: center;
+  align-self: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .item {
+    transition: none;
+  }
+}

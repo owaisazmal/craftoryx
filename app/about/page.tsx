@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import MagnetLines from '@/components/MagnetLines';
 
 export const metadata: Metadata = {
   title: 'About - The CraftoryX Mission',
@@ -24,18 +25,34 @@ export default function AboutPage() {
   return (
     <div className="py-12 bg-gray-50 dark:bg-gray-950 min-h-screen">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="mb-8 sm:mb-12 text-center">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 font-mono">
-            About CraftoryX
-          </h1>
-          <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300">
-            One mission. Ten apps. Twelve months.
-          </p>
-        </div>
+        {/* Background covering header through Public Commitments */}
+        <div className="relative">
+          <div className="absolute inset-0 z-0 overflow-hidden">
+            <MagnetLines
+              rows={12}
+              columns={14}
+              containerSize="100%"
+              lineColor="#cfd8dc"
+              lineWidth="2px"
+              lineHeight="28px"
+              baseAngle={-8}
+              className="opacity-60"
+            />
+          </div>
 
-        {/* Mission */}
-        <section className="bg-white dark:bg-gray-900 rounded-lg p-6 sm:p-8 mb-6 sm:mb-8 border border-gray-200 dark:border-gray-800">
+          <div className="relative z-10">
+            {/* Header */}
+            <div className="mb-8 sm:mb-12 text-center">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 font-mono">
+                About CraftoryX
+              </h1>
+              <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300">
+                One mission. Ten apps. Twelve months.
+              </p>
+            </div>
+
+            {/* Mission */}
+            <section className="bg-white/70 dark:bg-gray-900/60 backdrop-blur-sm rounded-lg p-6 sm:p-8 mb-6 sm:mb-8 border border-gray-200 dark:border-gray-800">
           <h2 className="text-xl sm:text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 font-mono">
             The Mission
           </h2>
@@ -55,10 +72,10 @@ export default function AboutPage() {
               <li>Developed transparently with weekly dev logs</li>
             </ul>
           </div>
-        </section>
+            </section>
 
-        {/* Constraints */}
-        <section className="bg-white dark:bg-gray-900 rounded-lg p-6 sm:p-8 mb-6 sm:mb-8 border border-gray-200 dark:border-gray-800">
+            {/* Constraints */}
+            <section className="bg-white/70 dark:bg-gray-900/60 backdrop-blur-sm rounded-lg p-6 sm:p-8 mb-6 sm:mb-8 border border-gray-200 dark:border-gray-800">
           <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 font-mono">
             The Rules
           </h2>
@@ -109,10 +126,10 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
-        </section>
+            </section>
 
-        {/* Developer Bio */}
-        <section className="bg-white dark:bg-gray-900 rounded-lg p-6 sm:p-8 mb-6 sm:mb-8 border border-gray-200 dark:border-gray-800">
+            {/* Developer Bio */}
+            <section className="bg-white/70 dark:bg-gray-900/60 backdrop-blur-sm rounded-lg p-6 sm:p-8 mb-6 sm:mb-8 border border-gray-200 dark:border-gray-800">
           <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 font-mono">
             About the Developer
           </h2>
@@ -132,10 +149,10 @@ export default function AboutPage() {
               <li>Learning by building</li>
             </ul>
           </div>
-        </section>
+            </section>
 
-        {/* Skills */}
-        <section className="bg-white dark:bg-gray-900 rounded-lg p-6 sm:p-8 mb-6 sm:mb-8 border border-gray-200 dark:border-gray-800">
+            {/* Skills */}
+            <section className="bg-white/70 dark:bg-gray-900/60 backdrop-blur-sm rounded-lg p-6 sm:p-8 mb-6 sm:mb-8 border border-gray-200 dark:border-gray-800">
           <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 font-mono">
             Tech Stack & Skills
           </h2>
@@ -149,10 +166,10 @@ export default function AboutPage() {
               </span>
             ))}
           </div>
-        </section>
+            </section>
 
-        {/* Public Commitments */}
-        <section className="bg-white dark:bg-gray-900 rounded-lg p-6 sm:p-8 mb-6 sm:mb-8 border border-gray-200 dark:border-gray-800">
+            {/* Public Commitments */}
+            <section className="bg-white/70 dark:bg-gray-900/60 backdrop-blur-sm rounded-lg p-6 sm:p-8 mb-6 sm:mb-8 border border-gray-200 dark:border-gray-800">
           <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-4 font-mono">
             Public Commitments
           </h2>
@@ -214,8 +231,10 @@ export default function AboutPage() {
             </div>
           </div>
         </section>
+          </div>
+        </div>
 
-        {/* Contact CTA */}
+        {/* Contact CTA (outside background wrapper) */}
         <section className="bg-blue-600 dark:bg-blue-700 rounded-lg p-8 text-center">
           <h2 className="text-xl sm:text-2xl font-bold text-white mb-4 font-mono">
             Let&apos;s Connect
