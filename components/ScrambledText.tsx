@@ -85,13 +85,14 @@ export default function ScrambledText({
     };
 
     const el = rootRef.current;
+    const mapRef = rafMap.current; // capture ref value for cleanup
     el.addEventListener('pointermove', handleMove);
 
     return () => {
       el.removeEventListener('pointermove', handleMove);
       // Cancel any pending RAFs
-      rafMap.current.forEach((id) => cancelAnimationFrame(id));
-      rafMap.current.clear();
+      mapRef.forEach((id) => cancelAnimationFrame(id));
+      mapRef.clear();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [radius, duration, speed, scrambleChars]);
@@ -121,4 +122,3 @@ export default function ScrambledText({
     </span>
   );
 }
-

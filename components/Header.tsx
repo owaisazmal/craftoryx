@@ -7,20 +7,20 @@ import ThemeToggle from './ThemeToggle';
 import ScrambledText from './ScrambledText';
 import GooeyNav from './GooeyNav';
 
+const NAV_ITEMS = [
+  { href: '/', label: 'Home' },
+  { href: '/projects', label: 'Projects' },
+  { href: '/dev-log', label: 'Dev Log' },
+  { href: '/contact', label: 'Contact' },
+];
+
 export default function Header() {
   const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const navItems = [
-    { href: '/', label: 'Home' },
-    { href: '/projects', label: 'Projects' },
-    { href: '/dev-log', label: 'Dev Log' },
-    { href: '/contact', label: 'Contact' },
-  ];
-
   useEffect(() => {
-    const index = navItems.findIndex(item => item.href === pathname);
+    const index = NAV_ITEMS.findIndex(item => item.href === pathname);
     if (index !== -1) {
       setActiveIndex(index);
     }
@@ -49,7 +49,7 @@ export default function Header() {
           <div className="hidden md:flex items-center justify-center absolute left-1/2 transform -translate-x-1/2 w-full pointer-events-none">
             <div className="pointer-events-auto">
               <GooeyNav
-                items={navItems}
+                items={NAV_ITEMS}
                 initialActiveIndex={activeIndex}
               />
             </div>
@@ -86,7 +86,7 @@ export default function Header() {
         {mobileMenuOpen && (
           <div className="md:hidden py-4 border-t border-gray-200 dark:border-gray-800">
             <div className="flex flex-col space-y-2">
-              {navItems.map((item) => (
+              {NAV_ITEMS.map((item) => (
                 <Link
                   key={item.href}
                   href={item.href}

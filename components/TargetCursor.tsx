@@ -367,7 +367,7 @@ const TargetCursor = ({ targetSelector = '.cursor-target', spinDuration = 2, hid
       document.body.style.cursor = originalCursor;
       updateCornersRef.current = null;
     };
-  }, [targetSelector, spinDuration, moveCursor, constants, hideDefaultCursor, enabled]);
+  }, [targetSelector, spinDuration, moveCursor, constants, hideDefaultCursor, enabled, fitOffset, offsetX, offsetY, hoverGrow]);
 
   useEffect(() => {
     if (!enabled || !cursorRef.current || !spinTl.current) return;
