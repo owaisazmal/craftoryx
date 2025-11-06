@@ -167,8 +167,8 @@ const GooeyNav = ({
 
     const resizeObserver = new ResizeObserver(() => {
       const currentActiveLi = navRef.current?.querySelectorAll('li')[activeIndex];
-      if (currentActiveLi && currentActiveLi[0]) {
-        updateEffectPosition(currentActiveLi[0] as HTMLElement);
+      if (currentActiveLi) {
+        updateEffectPosition(currentActiveLi as unknown as HTMLElement);
       }
     });
 
@@ -205,4 +205,3 @@ const GooeyNav = ({
 };
 
 export default GooeyNav;
-

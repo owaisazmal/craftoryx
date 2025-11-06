@@ -9,7 +9,7 @@ function DockItem({ children, className = '', onClick, mouseX, spring, distance,
   const isHovered = useMotionValue(0);
   const rafRef = useRef<number>();
 
-  const mouseDistance = useTransform(mouseX, (val) => {
+  const mouseDistance = useTransform(mouseX, (val: number) => {
     if (!ref.current || val === Infinity) return Infinity;
     const rect = ref.current.getBoundingClientRect();
     const centerX = rect.left + rect.width / 2;
@@ -117,6 +117,7 @@ export default function Dock({
 }: DockProps) {
   const mouseX = useMotionValue(Infinity);
   const isHovered = useMotionValue(0);
+  const rafRef = useRef<number>();
 
   const maxHeight = useMemo(
     () => Math.max(dockHeight, magnification + magnification / 2 + 4),
@@ -170,4 +171,3 @@ export default function Dock({
     </motion.div>
   );
 }
-

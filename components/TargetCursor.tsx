@@ -77,10 +77,10 @@ const TargetCursor = ({ targetSelector = '.cursor-target', spinDuration = 2, hid
 
     const cleanupTarget = (target: Element) => {
       if (currentTargetMove) {
-        target.removeEventListener('mousemove', currentTargetMove);
+        target.removeEventListener('mousemove', currentTargetMove as unknown as EventListener);
       }
       if (currentLeaveHandler) {
-        target.removeEventListener('mouseleave', currentLeaveHandler);
+        target.removeEventListener('mouseleave', currentLeaveHandler as unknown as EventListener);
       }
       currentTargetMove = null;
       currentLeaveHandler = null;
