@@ -1,0 +1,97 @@
+.target-cursor-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+  z-index: 10000; /* base */
+}
+
+.target-cursor-overlay {
+  position: fixed;
+  inset: 0; /* full viewport */
+  pointer-events: none;
+  z-index: 10020; /* above rotator and dot */
+}
+
+.target-cursor-rotator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  z-index: 10010; /* above dot, below overlay */
+}
+
+.rotator-corner {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  box-sizing: border-box;
+  transform-origin: 0 0;
+}
+
+.target-cursor-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  margin-left: -3px;
+  margin-top: -3px;
+  border-radius: 9999px;
+  background: #3b82f6; /* blue-500 */
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.6);
+}
+
+.target-cursor-corner {
+  position: fixed;
+  width: 12px;
+  height: 12px;
+  box-sizing: border-box;
+  transform-origin: 0 0; /* align translations from top-left */
+  will-change: transform;
+  opacity: 0; /* shown when locking onto a target */
+}
+
+/* L-shaped corners using borders */
+.corner-tl {
+  border-top: 3px solid rgba(59, 130, 246, 0.95);
+  border-left: 3px solid rgba(59, 130, 246, 0.95);
+}
+
+.corner-tr {
+  border-top: 3px solid rgba(59, 130, 246, 0.95);
+  border-right: 3px solid rgba(59, 130, 246, 0.95);
+}
+
+.corner-br {
+  border-bottom: 3px solid rgba(59, 130, 246, 0.95);
+  border-right: 3px solid rgba(59, 130, 246, 0.95);
+}
+
+.corner-bl {
+  border-bottom: 3px solid rgba(59, 130, 246, 0.95);
+  border-left: 3px solid rgba(59, 130, 246, 0.95);
+}
+
+@media (prefers-color-scheme: dark) {
+  .target-cursor-dot {
+    background: #60a5fa; /* blue-400 */
+    box-shadow: 0 0 10px rgba(96, 165, 250, 0.7);
+  }
+  .corner-tl,
+  .corner-tr,
+  .corner-br,
+  .corner-bl {
+    border-color: rgba(96, 165, 250, 0.95);
+  }
+}
+
+/* Position idle rotator corners relative to center */
+.target-cursor-rotator .corner-tl { transform: translate(-18px, -18px); }
+.target-cursor-rotator .corner-tr { transform: translate(6px, -18px); }
+.target-cursor-rotator .corner-br { transform: translate(6px, 6px); }
+.target-cursor-rotator .corner-bl { transform: translate(-18px, 6px); }

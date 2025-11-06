@@ -8,7 +8,7 @@ interface AppCardProps {
 
 export default function AppCard({ app }: AppCardProps) {
   return (
-    <article className="group relative bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6 hover:border-gray-400 dark:hover:border-gray-600 hover:shadow-lg transition-all">
+    <article className="cursor-target group relative bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-lg p-6 hover:border-gray-400 dark:hover:border-gray-600 hover:shadow-lg transition-all">
       <div className="flex items-start justify-between mb-3">
         <h3 className="text-xl font-bold text-gray-900 dark:text-white font-mono">
           {app.name}
@@ -37,7 +37,7 @@ export default function AppCard({ app }: AppCardProps) {
         </span>
         <Link
           href={`/projects/${app.slug}`}
-          className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+          className="cursor-target text-blue-600 dark:text-blue-400 hover:underline font-medium"
           aria-label={`View details for ${app.name}`}
         >
           View Details →

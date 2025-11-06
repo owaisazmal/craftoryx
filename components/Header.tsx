@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import ThemeToggle from './ThemeToggle';
-import BlurText from './BlurText';
+import ScrambledText from './ScrambledText';
 import GooeyNav from './GooeyNav';
 
 export default function Header() {
@@ -34,14 +34,15 @@ export default function Header() {
             href="/"
             className="text-xl font-bold font-mono text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors z-10 relative"
           >
-            <BlurText
-              text="CraftoryX"
+            <ScrambledText
               className="text-xl font-bold font-mono"
-              animateBy="chars"
-              delay={50}
-              direction="top"
-              threshold={0}
-            />
+              radius={120}
+              duration={1.0}
+              speed={0.6}
+              scrambleChars=".:/\\_-+*<>[]{}#%@&?"
+            >
+              CraftoryX
+            </ScrambledText>
           </Link>
 
           {/* Desktop Navigation - GooeyNav */}
