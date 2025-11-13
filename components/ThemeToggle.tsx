@@ -2,14 +2,21 @@
 
 import { useEffect, useState } from 'react';
 
+const VALID_THEMES = ['light', 'dark'] as const;
+type Theme = typeof VALID_THEMES[number];
+
+const isValidTheme = (value: unknown): value is Theme => {
+  return typeof value === 'string' && VALID_THEMES.includes(value as Theme);
+};
+
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState<'light' | 'dark'>('dark');
+  const [theme, setTheme] = useState<Theme>('dark');
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-    const savedTheme = localStorage.getItem('theme') as 'light' | 'dark';
-    const initialTheme = savedTheme || 'dark'; // Default to dark mode
+    const savedTheme = localStorage.getItem('theme');
+    const initialTheme = isValidTheme(savedTheme) ? savedTheme : 'dark'; // Default to dark mode
     setTheme(initialTheme);
     document.documentElement.classList.toggle('dark', initialTheme === 'dark');
   }, []);

@@ -15,7 +15,12 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // In production, this would send to an API endpoint or email service
-    console.log('Form submitted:', formData);
+    // For now, we'll use mailto as a fallback
+    const mailtoLink = `mailto:hello@craftoryx.com?subject=${encodeURIComponent(`Contact from ${formData.name} - ${formData.reason}`)}&body=${encodeURIComponent(`From: ${formData.name}\nEmail: ${formData.email}\n\n${formData.message}`)}`;
+
+    // Open mailto link
+    window.location.href = mailtoLink;
+
     setSubmitted(true);
 
     // Reset form after 3 seconds
@@ -31,8 +36,6 @@ export default function ContactPage() {
       [e.target.name]: e.target.value,
     });
   };
-
-  const mailtoLink = `mailto:hello@craftoryx.com?subject=Contact from ${formData.name}&body=${encodeURIComponent(formData.message)}`;
 
   return (
     <div className="py-12 bg-gray-50 dark:bg-gray-950 min-h-screen">
@@ -151,7 +154,7 @@ export default function ContactPage() {
                 Prefer email?
               </p>
               <a
-                href={mailtoLink}
+                href="mailto:hello@craftoryx.com"
                 className="text-blue-600 dark:text-blue-400 hover:underline"
               >
                 hello@craftoryx.com
