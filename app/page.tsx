@@ -389,7 +389,7 @@ export default async function Home() {
             <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-8">
               <div className="relative w-32 h-32 sm:w-40 sm:h-40 flex-shrink-0">
                 <Image
-                  src="https://media.licdn.com/dms/image/v2/D5603AQFNn4szZ9DOvQ/profile-displayphoto-shrink_800_800/B56ZcgOyXIHEAc-/0/1748592438322?e=1763596800&v=beta&t=2EB4kuEz4OzTMwy8kvMtaz2kvvslg1EF1ljhPv2fIlk"
+                  src="/owais-profile.jpg"
                   alt="Owais Khan"
                   width={160}
                   height={160}
