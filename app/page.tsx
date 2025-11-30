@@ -387,13 +387,12 @@ export default async function Home() {
           <div className="bg-white dark:bg-gray-900 rounded-lg p-6 sm:p-8 border border-gray-200 dark:border-gray-800">
             {/* Profile Section */}
             <div className="flex flex-col md:flex-row items-center md:items-start gap-6 mb-8">
-              <div className="relative w-32 h-32 sm:w-40 sm:h-40 flex-shrink-0">
+              <div className="relative w-32 h-32 sm:w-40 sm:h-40 flex-shrink-0 overflow-hidden rounded-full border-4 border-gray-200 dark:border-gray-700">
                 <Image
                   src="/owais-profile.jpg"
                   alt="Owais Khan"
-                  width={160}
-                  height={160}
-                  className="rounded-full object-cover border-4 border-gray-200 dark:border-gray-700"
+                  fill
+                  className="object-cover"
                 />
               </div>
 
