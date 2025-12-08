@@ -2,6 +2,63 @@ import { App } from '@/types';
 
 export const apps: App[] = [
   {
+    id: 'a0',
+    name: 'SocioBlock',
+    slug: 'socioblock',
+    shortDescription: 'Screen time management through gamification and social accountability',
+    description: 'A SwiftUI-based iOS application designed to help users manage and reduce their screen time through gamification, social accountability, and detailed analytics.',
+    status: 'In Progress',
+    targetDate: '2025-10',
+    tech: ['SwiftUI', 'Swift Charts', 'HealthKit', 'UserNotifications'],
+    links: {
+      testflight: '#',
+    },
+    features: [
+      'Real-time screen time tracking',
+      'Streak-based gamification',
+      'Social leaderboards (Friends & Global)',
+      'Detailed analytics with charts',
+      'Accountability partner alerts',
+      'Badge achievement system'
+    ],
+    roadmap: [
+      { label: 'MVP - Dashboard & tracking UI', done: true },
+      { label: 'Beta - Streak system & badges', done: true },
+      { label: 'v1.0 - Screen Time API integration', done: false },
+      { label: 'v1.1 - Social features & backend', done: false }
+    ],
+    changelog: [
+      {
+        date: '2025-10-15',
+        version: '0.2.0',
+        notes: [
+          'Added streak tracking with visual progress',
+          'Implemented badge achievement system',
+          'Created social leaderboards UI',
+          'Added accountability partner alerts'
+        ]
+      },
+      {
+        date: '2025-10-01',
+        version: '0.1.0',
+        notes: [
+          'Initial prototype with dashboard',
+          'Basic analytics charts',
+          'Dark theme implementation',
+          'Custom navigation system'
+        ]
+      }
+    ],
+    problem: 'People struggle with excessive screen time but lack motivation to change habits. Traditional screen time apps are boring and lack social accountability.',
+    solution: [
+      'Gamified experience with streaks and badges',
+      'Social competition through leaderboards',
+      'Accountability partners for motivation',
+      'Beautiful analytics for awareness'
+    ],
+    locked: false
+  },
+  {
     id: 'a1',
     name: 'FocusFlow',
     slug: 'focusflow',
@@ -51,7 +108,8 @@ export const apps: App[] = [
       'Clean, distraction-free interface',
       'High-quality ambient soundscapes',
       'Data-driven productivity insights'
-    ]
+    ],
+    locked: true
   },
   {
     id: 'a2',
@@ -82,7 +140,8 @@ export const apps: App[] = [
       'One-tap expense logging',
       'Automatic categorization with CoreML',
       'Smart insights without manual setup'
-    ]
+    ],
+    locked: true
   },
   {
     id: 'a3',
@@ -113,7 +172,8 @@ export const apps: App[] = [
       'Visual progress that motivates',
       'Smart reminders at optimal times',
       'Integrated with health data'
-    ]
+    ],
+    locked: true
   },
   {
     id: 'a4',
@@ -144,7 +204,8 @@ export const apps: App[] = [
       'Instant voice capture',
       'Automatic organization with AI',
       'Powerful yet simple interface'
-    ]
+    ],
+    locked: true
   },
   {
     id: 'a5',
@@ -175,7 +236,8 @@ export const apps: App[] = [
       'Fast, focused workout entry',
       'Clear progress visualization',
       'No social distractions'
-    ]
+    ],
+    locked: true
   },
   {
     id: 'a6',
@@ -206,7 +268,8 @@ export const apps: App[] = [
       'Clean, focused interface',
       'Easy quote and note capture',
       'Personal reading analytics'
-    ]
+    ],
+    locked: true
   },
   {
     id: 'a7',
@@ -237,7 +300,8 @@ export const apps: App[] = [
       'Context-aware reminders',
       'One-tap logging',
       'Seamless HealthKit integration'
-    ]
+    ],
+    locked: true
   },
   {
     id: 'a8',
@@ -268,7 +332,8 @@ export const apps: App[] = [
       'Visual Kanban workflow',
       'Integrated time tracking',
       'Balance of simplicity and power'
-    ]
+    ],
+    locked: true
   },
   {
     id: 'a9',
@@ -299,7 +364,8 @@ export const apps: App[] = [
       'Visual weekly planner',
       'Recipe library with photos',
       'Smart shopping list generation'
-    ]
+    ],
+    locked: true
   },
   {
     id: 'a10',
@@ -330,7 +396,8 @@ export const apps: App[] = [
       'HealthKit-based tracking',
       'Personalized AI insights',
       'Actionable routine recommendations'
-    ]
+    ],
+    locked: true
   }
 ];
 

@@ -16,6 +16,15 @@ const config: Config = {
       fontFamily: {
         anton: ['Anton', 'sans-serif'],
       },
+      animation: {
+        click: 'click 0.6s ease-in-out infinite',
+      },
+      keyframes: {
+        click: {
+          '0%, 100%': { transform: 'scale(1)' },
+          '50%': { transform: 'scale(1.2)' },
+        },
+      },
     },
   },
   plugins: [

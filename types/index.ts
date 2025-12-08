@@ -21,6 +21,7 @@ export interface App {
   heroImage?: string;
   problem: string;
   solution: string[];
+  locked?: boolean;
 }
 
 export interface RoadmapItem {
