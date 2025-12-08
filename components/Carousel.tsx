@@ -158,9 +158,6 @@ export default function Carousel({
               }}
               transition={effectiveTransition}
             >
-              <div className={`carousel-item-header ${round ? 'round' : ''}`}>
-                <span className="carousel-icon-container">{item.icon}</span>
-              </div>
               <div className="carousel-item-content">
                 <div className="carousel-item-title">{item.title}</div>
                 <p className="carousel-item-description">{item.description}</p>
